@@ -1,0 +1,21 @@
+{
+  "name": "json-filter",
+  "version": "0.1.0",
+  "description": "Filters arrays of json objects",
+  "main": "index.js",
+  "respository": "git@github.com:timothy-r/json-filter.git",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --recursive ../test"
+  },
+  "author": "Tim Rodger tim.rodger@gmail.com",
+  "dependencies": {
+    "express": "~4.10.4",
+    "body-parser": "~1.9.3",
+    "winston": "~0.8.3"
+  },
+  "devDependencies": {
+    "should": "~4.3.0",
+    "mocha": "~2.0.1",
+    "mockman": "*"
+  }
+}
