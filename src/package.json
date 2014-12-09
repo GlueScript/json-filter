@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Filters arrays of json objects",
   "main": "index.js",
-  "respository": "git@github.com:timothy-r/json-filter.git",
+  "repository": {
+    "url": "git@github.com:timothy-r/json-filter.git",
+    "type": "git"
+  },
   "scripts": {
     "test": "node_modules/.bin/mocha --recursive ../test"
   },
