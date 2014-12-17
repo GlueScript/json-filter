@@ -6,7 +6,7 @@ describe('Filter', function() {
         it('should respond with an array for no input', function() {
             var value = [];
             var pattern = '';
-            filter.match(value, pattern, function(result) {
+            filter.match(value, pattern, function(err, result) {
                 assert.equal(0, result.length);
             });
         });
@@ -15,7 +15,7 @@ describe('Filter', function() {
         it('should respond with an array for no input', function() {
             var value = [];
             var pattern = '';
-            filter.remove(value, pattern, function(result) {
+            filter.remove(value, pattern, function(err, result) {
                 assert.equal(0, result.length);
             });
         });

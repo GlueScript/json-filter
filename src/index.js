@@ -26,12 +26,20 @@ app.post('/', function(req, res) {
     console.log(req.body);
     // action is either return matches (default) or remove them (req.param['rev'] = true)
     if (req.param['rev']){
-        filter.remove(req.body, req.param['pattern'], function(data) {
-            res.json(data);
+        filter.remove(req.body, req.param['pattern'], function(err, data) {
+            if (!err){
+                res.json(data);
+            } else {
+                res.status(400).send(data);
+            }
         });
     } else {
-        filter.match(req.body, req.param['pattern'], function(data) {
-            res.json(data);
+        filter.match(req.body, req.param['pattern'], function(err, data) {
+            if (!err){
+                res.json(data);
+            } else {
+                res.status(400).send(data);
+            }
         });
     }
 });

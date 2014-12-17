@@ -11,7 +11,7 @@ exports.match = function(input, pattern, callback) {
         // add all matching elements to output
     }
 
-    callback(output);
+    callback(null, output);
 };
 
 exports.remove = function(input, pattern, callback) {
@@ -27,5 +27,5 @@ exports.remove = function(input, pattern, callback) {
         // add all non-matching elements to output
     }
 
-    callback(output);
+    callback(null, output);
 };
