@@ -23,10 +23,13 @@ app.get('/', function (req, res) {
 
 // expects a json array in req.body
 app.post('/', function(req, res) {
+
     console.log(req.body);
-    // action is either return matches (default) or remove them (req.param['rev'] = true)
-    if (req.param['rev']){
-        filter.remove(req.body, req.param['pattern'], function(err, data) {
+
+    // action is either return matches (default) or remove them (req.query.rem = true)
+    if (req.query.rem){
+        delete req.query.rem;
+        filter.remove(req.body, req.query, function(err, data) {
             if (!err){
                 res.json(data);
             } else {
@@ -34,7 +37,7 @@ app.post('/', function(req, res) {
             }
         });
     } else {
-        filter.match(req.body, req.param['pattern'], function(err, data) {
+        filter.match(req.body, req.query, function(err, data) {
             if (!err){
                 res.json(data);
             } else {
