@@ -37,7 +37,7 @@ app.post('/', function(req, res) {
             }
         });
     } else {
-        filter.match(req.body, req.query, function(err, data) {
+        filter.keep(req.body, req.query, function(err, data) {
             if (!err){
                 res.json(data);
             } else {
