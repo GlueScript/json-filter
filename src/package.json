@@ -1,6 +1,6 @@
 {
   "name": "json-filter",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Filters arrays of json objects",
   "main": "index.js",
   "repository": {
