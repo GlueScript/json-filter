@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
 // expects a json array in req.body
 app.post('/', function(req, res) {
 
-    console.log(req.body);
+    logger.log('info', req.body);
 
     // action is either return matches (default) or remove them (req.query.rem = true)
     if (req.query.rem){
